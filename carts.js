@@ -8,9 +8,7 @@ const cart = {
   },
   calculateItemPrice() {
     this.totalPrice = this.items.reduce(
-      (acc, items) => acc + items.price * items.quanty,
-      0
-    );
+      (acc, item) => acc + item.price * item.quantity,0);
   },
   increaseCount(num) {
     this.count += num;
